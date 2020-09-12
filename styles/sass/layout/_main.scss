@@ -1,0 +1,13 @@
+// The main layout and style of the page
+
+body {
+    background-image: url(../assets/daisyWebBG.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    @include wrapper(1100px);
+}

@@ -1,0 +1,11 @@
+// Styles for the Game Area
+ul.cardDeck {
+    display: grid;
+}
+
+// Styles for the Game Cards
+li.card {
+    height: 125px;
+    width: 125px;
+    background-color: lawngreen;
+}

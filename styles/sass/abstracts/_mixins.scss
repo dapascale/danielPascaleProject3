@@ -1,0 +1,17 @@
+// Mixins to streamline further CSS
+
+@mixin wrapper($maxWidth) {
+    max-width: $maxWidth;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@mixin position($type: relative, $top: 0, $left: 0) {
+    position: $type;
+    top: $top;
+    left: $left;
+}
+
+@mixin center {
+    margin: 0 auto;
+}

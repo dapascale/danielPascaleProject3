@@ -1,0 +1,52 @@
+// Styles and layout for the header, logo, and restart button
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px auto;
+    position: relative;
+    .mainLogo {
+        width: 100%;
+        @include position($left: -40px);
+        z-index: 9;
+    }
+    .nameOfTheGame {
+        width: 80%;
+        @include center;
+        @include position ($top: -40px, $left: -20px);
+        z-index: 10;
+    }
+}
+
+.restart {
+    width: max-content;
+    z-index: 8;
+    @include center;
+    @include position($top: -40px, $left: -10px);
+    // TODO work on button slide down
+    button {
+        width: 150px;
+        height: 75px;
+
+        background: none;
+        background-image: url(../assets/buttonBG.gif);
+        background-size: cover;
+        border: none;
+        overflow: visible;
+        color: $pink;
+    }
+}
+
+h1 {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}

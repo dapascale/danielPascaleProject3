@@ -234,3 +234,93 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.logo .mainLogo {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: -40px;
+  z-index: 9;
+}
+
+.logo .nameOfTheGame {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+  left: -20px;
+  z-index: 10;
+}
+
+.restart {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 8;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+  left: -10px;
+}
+
+.restart button {
+  width: 150px;
+  height: 75px;
+  background: none;
+  background-image: url(../assets/buttonBG.gif);
+  background-size: cover;
+  border: none;
+  overflow: visible;
+  color: #eb31c2;
+}
+
+h1 {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+body {
+  background-image: url(../assets/daisyWebBG.jpg);
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul.cardDeck {
+  display: -ms-grid;
+  display: grid;
+}
+
+li.card {
+  height: 125px;
+  width: 125px;
+  background-color: lawngreen;
+}
