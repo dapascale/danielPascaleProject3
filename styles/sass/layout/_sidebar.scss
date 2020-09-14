@@ -1,1 +1,7 @@
 // Styles and layout for the informative sidebar, where matched characters will be contained
+.sidebarContainer {
+    margin-left: 40px;
+    width: 30%;
+    height: 100px;
+    @include boxBG;
+}

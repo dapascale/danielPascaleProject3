@@ -5,9 +5,19 @@ body {
     background-size: cover;
     background-position: top center;
     height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .wrapper {
     @include wrapper(1100px);
+}
+
+.container {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px auto 0;
 }

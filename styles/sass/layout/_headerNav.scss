@@ -3,7 +3,7 @@
 .logo {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
     margin: 20px auto;
     position: relative;
     .mainLogo {
@@ -14,7 +14,7 @@
     .nameOfTheGame {
         width: 80%;
         @include center;
-        @include position ($top: -40px, $left: -20px);
+        @include position($top: -25px, $left: -30px);
         z-index: 10;
     }
 }
@@ -23,11 +23,11 @@
     width: max-content;
     z-index: 8;
     @include center;
-    @include position($top: -40px, $left: -10px);
+    @include position($top: -30px, $left: -20px);
     // TODO work on button slide down
     button {
-        width: 150px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
 
         background: none;
         background-image: url(../assets/buttonBG.gif);
@@ -39,14 +39,5 @@
 }
 
 h1 {
-    font-size: 0;
-    width: 1px;
-    height: 1px;
-    display: inline-block;
-    overflow: hidden;
-    position: absolute!important;
-    border: 0!important;
-    padding: 0!important;
-    margin: 0!important;
-    clip: rect(1px,1px,1px,1px);
+    @include hideThis;
 }

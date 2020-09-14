@@ -1,11 +1,30 @@
 // Styles for the Game Area
-ul.cardDeck {
-    display: grid;
+
+#cardGame {
+    width: 60%;
+}
+
+.cardDeck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
+    @include boxBG;
 }
 
 // Styles for the Game Cards
-li.card {
+.card {
+    margin: 10px;
     height: 125px;
     width: 125px;
+    border-radius: 5px;
     background-color: lawngreen;
+    cursor: pointer;
+    list-style: none;
+    img {
+        width: 100%;
+
+    }
 }
