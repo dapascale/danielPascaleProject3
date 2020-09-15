@@ -98,7 +98,7 @@ daisyApp.setGameArea = function(){
     // loop through array and grab image and alt text
     allCards.forEach((hunk) => {
         // create a <img> for each item in deck array
-        const cardImage = $('<img>').addClass('card').attr('src', hunk.imagePath).attr('alt', hunk.altText).attr('id', hunk.id)
+        const cardImage = $('<div>').addClass('cardBack').append($('<img>').addClass('card').attr('src', hunk.imagePath).attr('alt', hunk.altText).attr('id', hunk.id));
         // append a <img> with picture and alt text to the game area
         $('.cardDeck').append(cardImage);
     })

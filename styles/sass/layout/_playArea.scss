@@ -18,21 +18,32 @@
 
 // Styles for the Game Cards
 .card {
-    margin: 10px;
-    height: 125px;
-    width: 125px;
+    width: 100%;
     border-radius: 5px;
     background-color: #7cfc00;
     cursor: pointer;
     list-style: none;
     box-shadow: none;
+    opacity: 0;
     visibility: visible;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &.show {
         box-shadow: 0px 0px 10px 10px #7cfc00;
+        opacity: 1;
     }
     &.match {
         box-shadow: 0px 0px 10px 10px #00dffc;
         visibility: hidden;
     }
+}
+
+.cardBack {
+    background-color: #7cfc00;
+    background-image: url(../assets/cardBack.jpg);
+    background-size: cover;
+    background-position: center;
+    width: min-content;
+    width: 125px;
+    height: 125px;
+    margin: 10px;
 }
