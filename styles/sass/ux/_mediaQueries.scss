@@ -1,14 +1,26 @@
 // Laptop
-@media (min-width: 940px) {
+@media (max-width: 940px) {
 
 }
 
 // Tablet (portrait)
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
+    #cardGame {
+    width: 60%;
+        .card {
+            height: 100px;
+            width: 100px;
+        }
+    }
 }
 
 // Mobile (portrait)
-@media (min-width: 320px) {
-
+@media (max-width: 420px) {
+    #cardGame {
+        width: 100%;
+        .card {
+            height: 75px;
+            width: 75px;
+        }
+    }
 }

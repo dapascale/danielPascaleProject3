@@ -39,6 +39,7 @@ const cardDeck = [
     },
 ]
 
+const backImg = './assets/cardBack.jpg'
 // duplicate the cards
 let allCards = cardDeck.concat(cardDeck);
 // randomize the Deck
@@ -69,12 +70,11 @@ daisyApp.startGame = function(){
     })
 }
 
-// daisyApp.newGame = function(){
-//     $('#newGame').on('click', function(){
-//         console.log('hello')
-//         daisyApp.setGameArea();
-//     })
-// }
+daisyApp.newGame = function(){
+    $('#newGame').on('click', function(){
+        location.reload();
+    })
+}
 
 
 daisyApp.reset = function(){
@@ -102,6 +102,7 @@ daisyApp.setGameArea = function(){
         // append a <img> with picture and alt text to the game area
         $('.cardDeck').append(cardImage);
     })
+
     daisyApp.gameplay();
 }
 
@@ -137,7 +138,7 @@ daisyApp.gameplay = function(){
 
 daisyApp.init = function(){
     daisyApp.welcomeMessage();
-    // daisyApp.newGame();
+    daisyApp.newGame();
 }
 
 // Ready the doc
