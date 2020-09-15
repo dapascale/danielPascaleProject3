@@ -1,5 +1,11 @@
 // Create a namespacing object for the App
 const daisyApp = {};
+let count = 0;
+let oneFlip = '';
+let twoFlip = '';
+let oneFlipID = '';
+let twoFlipID = '';
+let firstClick = null
 
 // create an array to store the cards
 const cardDeck = [
@@ -35,11 +41,23 @@ const cardDeck = [
 
 // duplicate the cards
 let allCards = cardDeck.concat(cardDeck);
-
 // randomize the Deck
 // NOTE*** that I found the below randomizer code on Stack Overflow
 allCards = allCards.sort(() => 0.5 - Math.random());
 
+daisyApp.reset = function(){
+    count = 0;
+    oneFlip = '';
+    oneFlipID = '';
+    twoFlip = '';
+    twoFlipID = '';
+}
+
+daisyApp.resetCards = function () {
+    setTimeout( function() {
+        $('img').removeClass('show');
+    }, 500) 
+}
 
 // display the cards on the game board in a random order
 daisyApp.setGameArea = function(){
@@ -55,16 +73,11 @@ daisyApp.setGameArea = function(){
     daisyApp.gameplay();
 }
 
-let count = 0;
-let oneFlip = '';
-let twoFlip = '';
-let oneFlipID = '';
-let twoFlipID = '';
-
 daisyApp.gameplay = function(){
     // add event listen for click
     $('.card').on('click', function(){
         // only add class of show for up to two cards
+        // TODO disable same card from being clicked twice
         if (count < 2) {
             count++;
             $(this).addClass('show');
@@ -79,8 +92,12 @@ daisyApp.gameplay = function(){
                 }
             }
             if (oneFlipID === twoFlipID) {
-                $(oneFlip).addClass('match').attr('disabled');
-                $(twoFlip).addClass('match').attr('disabled');
+                $(oneFlip).addClass('match');
+                $(twoFlip).addClass('match');
+            }
+            if (count === 2) {
+                daisyApp.reset();
+                daisyApp.resetCards();
             }
         }
     })
