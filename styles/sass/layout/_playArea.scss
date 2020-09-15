@@ -2,6 +2,7 @@
 
 #cardGame {
     width: 60%;
+    @include boxBG;
 }
 
 .cardDeck {
@@ -12,6 +13,7 @@
     padding-left: 0;
     margin-top: 0;
     @include boxBG;
+    border: none;
 }
 
 // Styles for the Game Cards
@@ -25,13 +27,12 @@
     list-style: none;
     box-shadow: none;
     visibility: visible;
-    transition: all 0.2s ease-in-out;
-    img {
-        width: 100%;
-
-    }
+    transition: box-shadow 0.2s ease-in-out;
     &.show {
         box-shadow: 0px 0px 10px 10px #7cfc00;
+        background-color: red;
+        backface-visibility: visible;
+        transform: rotateY(180deg);
     }
     &.match {
         box-shadow: 0px 0px 10px 10px #00dffc;

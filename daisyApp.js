@@ -45,6 +45,38 @@ let allCards = cardDeck.concat(cardDeck);
 // NOTE*** that I found the below randomizer code on Stack Overflow
 allCards = allCards.sort(() => 0.5 - Math.random());
 
+daisyApp.welcomeMessage = function(){
+    $('#cardGame').append(`
+        <div class="welcomeOverlay">
+            <p>After a night of <span>sex, booze, and rock 'n roll</span>, the boys have been let loose again! <span>Daisy needs your help</span> to track them down.</p>
+            <ul>
+                <li>1. <span>Click on a card</span> to turn it over and reveal a <span>hunk</span>.</li>
+                <li>2. <span>Click on a second card</span> to turn it over. If the two hunks match, great job!</li>
+                <li>3. If the two hunks <span>do not match, they will be returned</span> to their face-down positions.</li>
+                <li>4. <span>Match all of the hunks</span> to return them to Daisy's mansion.</li>
+                <li>5. This game relies on memory - <span>so remember to have fun!</span></li>
+            </ul>
+            <button id="begin">Let's rock!</button>
+        </div>
+    `)
+    daisyApp.startGame();
+}
+
+daisyApp.startGame = function(){
+    $('#begin').on('click', function(){
+        $('#cardGame').empty();
+        daisyApp.setGameArea();
+    })
+}
+
+// daisyApp.newGame = function(){
+//     $('#newGame').on('click', function(){
+//         console.log('hello')
+//         daisyApp.setGameArea();
+//     })
+// }
+
+
 daisyApp.reset = function(){
     count = 0;
     oneFlip = '';
@@ -55,7 +87,7 @@ daisyApp.reset = function(){
 
 daisyApp.resetCards = function () {
     setTimeout( function() {
-        $('img').removeClass('show');
+        $('img').removeClass('show animate__animated animate__jello');
     }, 500) 
 }
 
@@ -67,7 +99,7 @@ daisyApp.setGameArea = function(){
     allCards.forEach((hunk) => {
         // create a <img> for each item in deck array
         const cardImage = $('<img>').addClass('card').attr('src', hunk.imagePath).attr('alt', hunk.altText).attr('id', hunk.id)
-        // append a <div> with picture and alt text to the game are
+        // append a <img> with picture and alt text to the game area
         $('.cardDeck').append(cardImage);
     })
     daisyApp.gameplay();
@@ -80,7 +112,7 @@ daisyApp.gameplay = function(){
         // TODO disable same card from being clicked twice
         if (count < 2) {
             count++;
-            $(this).addClass('show');
+            $(this).addClass('show animate__animated animate__jello');
             // on first guess, assign the flipNumber, etc
             if (count === 1) {
                 oneFlip = $(this);
@@ -104,7 +136,8 @@ daisyApp.gameplay = function(){
 }
 
 daisyApp.init = function(){
-    daisyApp.setGameArea();
+    daisyApp.welcomeMessage();
+    // daisyApp.newGame();
 }
 
 // Ready the doc

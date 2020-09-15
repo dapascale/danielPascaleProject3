@@ -23,18 +23,11 @@
     width: max-content;
     z-index: 8;
     @include center;
-    @include position($top: -30px, $left: -20px);
+    @include position($top: -20px, $left: -20px);
     // TODO work on button slide down
     button {
         width: 100px;
         height: 50px;
-
-        background: none;
-        background-image: url(../assets/buttonBG.gif);
-        background-size: cover;
-        border: none;
-        overflow: visible;
-        color: $pink;
     }
 }
 

@@ -1,2 +1,22 @@
 // Typography used in app-wide
+html {
+    font-size: 62.5%;
+}
 
+body,
+h1,
+p,
+button {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.5rem;
+}
+
+button {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+span {
+    text-decoration: #7cfc00 3px underline;
+    font-size: 1.8rem;
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daisy of Love's Match the Catch</title>
     <link rel="icon" type="image/icon" href="./assets/faviconDaisy.ico">
-    <!-- google fonts here -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./styles/style.css">
     <!-- TODO ask on Monday if they will dock marks for you loading your scripts up 'n here. -->
 </head>
@@ -20,7 +21,7 @@
                 <h1>Daisy of Love Match the Catch Game</h1>
                 <!-- button to allow user to restart game at any time -->
                 <div class="restart">
-                    <button>
+                    <button id="newGame">
                         Restart
                     </button>
                 </div>
@@ -29,16 +30,14 @@
     </header>
 
     <main class="wrapper">
-
         <section>
-            <!-- Container for the Play Area -->
+            <!-- Container for the Play Area and Sidebar (if Stretch Goals met) -->
             <div class="container playArea">
-
                 <!-- Play Area with Cards (<li>'s) -->
                 <div id="cardGame">
 
-
                 </div>
+                <!-- Sidebar with card display STRETCH GOAL -->
                 <div class="sidebarContainer">
                     <div class="cardInfo">
 
@@ -46,11 +45,10 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section>
-            <p>created at <a><img src="" alt="Link to Juno College website in Old English font"></a></p>
+            <p>created at <a href="https://junocollege.com/"><img src="./assets/junoLogo.gif" alt="Link to Juno College website in Old English font"></a></p>
         </section>
     </main>
 
@@ -59,20 +57,4 @@
 <script src="https://kit.fontawesome.com/8b01757f0e.js" crossorigin="anonymous"></script>
 <script src='./daisyApp.js'></script>
 </body>
-
 </html>
-
-                <!-- Welcome message explaining rules of the game -->
-                <!-- <div class="welcomeOverlay">
-                                    <h3>Daisy of Love's Match the Catch!</h3>
-                                    <p>After a night of sex, booze, and rock 'n roll', the boys have been let loose again! Daisy needs your help to track them down.</p>
-                                    <ul>
-                                        <li>Click on a card to turn it over and reveal a hunk.</li>
-                                        <li>Click on a second card to turn it over. If the two hunks match, great job!</li>
-                                        <li>If the two hunks do not match, they will be returned to their face-down positions.</li>
-                                        <li>Match all of the hunks to return the boys to Daisy's mansion.</li>
-                                        <li>This game relies on memory - so remember to have fun!</li>
-                                    </ul> -->
-                <!-- Button to hide welcome message and begin game -->
-                <!-- <button>Let's rock!</button>
-                                </div> -->

@@ -19,5 +19,56 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 60px auto 0;
+    margin: 0 auto;
+}
+
+.welcomeOverlay {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    img {
+        width: 50%;
+        @include center;
+    }
+    p {
+        width: 100%;
+        line-height: 20px;
+    }
+    ul {
+        width: 100%;
+        line-height: 20px;
+        li {
+            list-style: none;
+        }
+    }
+    button {
+        width: 100px;
+        height: 50px;
+        @include center;
+
+    }
+
+}
+
+button {
+    background: none;
+    background-image: url(../assets/buttonBG.gif);
+    background-size: cover;
+    border: none;
+    overflow: visible;
+    color: $pink;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        color: #7cfc00;
+        font-size: 1.8rem;
+    }
+}
+
+p {
+    width: min-content;
+    margin: 20px auto 0;
+    line-height: 30px;
 }
